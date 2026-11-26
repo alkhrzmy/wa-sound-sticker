@@ -1,0 +1,53 @@
+{
+  "name": "wa-sound-sticker",
+  "version": "1.0.0",
+  "description": "Zero-touch WhatsApp sound sticker toolkit (protobuf field 134 + EXIF 0x5741) for Baileys 7.x, CLI, MCP servers, and Hermes Agent.",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./webp": "./src/webp.js",
+    "./media": "./src/media.js",
+    "./wire": "./src/wire.js",
+    "./sender": "./src/sender.js",
+    "./hermes-bridge": "./src/hermes-bridge.js",
+    "./mcp": "./src/mcp.js"
+  },
+  "bin": {
+    "wa-sound-sticker": "./src/cli.js",
+    "wa-sound-sticker-mcp": "./src/mcp.js"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "keywords": [
+    "whatsapp",
+    "sound-sticker",
+    "audio-sticker",
+    "baileys",
+    "sticker",
+    "mcp",
+    "hermes-agent",
+    "webp",
+    "opus"
+  ],
+  "author": "Gymnastiar Al K (@alkhrzmy)",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "sharp": "^0.35.5"
+  },
+  "peerDependencies": {
+    "@whiskeysockets/baileys": ">=7.0.0-rc1"
+  },
+  "peerDependenciesMeta": {
+    "@whiskeysockets/baileys": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@whiskeysockets/baileys": "7.0.0-rc13"
+  }
+}
